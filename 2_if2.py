@@ -14,13 +14,37 @@
   и выводя на экран результаты
 
 """
+st1 = True
+st2 = 1
+st3 = 'одинаковая строка'
+st4 = 'одинаковая строка'
+st5 = 'Первая длиннее'
+st6 = 'второй'
+st7 = 'Вторая строка - это'
+st8 = 'learn'
+
+
+
+def check_str(a, b):
+    if type(a) is not str or type(b) is not str:
+        print(0)
+    elif a == b:
+        print(1)
+    elif a != b and b == 'learn':
+        print(3)
+    elif a != b and len(a) > len(b):
+        print(2)
 
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
-    
+    check_str(st1, st2)
+    check_str(st3, st4)
+    check_str(st5, st6)
+    check_str(st7, st8)
+
+
 if __name__ == "__main__":
     main()
