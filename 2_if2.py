@@ -25,25 +25,26 @@ st8 = 'learn'
 
 
 
-def check_str(a, b):
-    if type(a) is not str or type(b) is not str:
-        print(0)
-    elif a == b:
-        print(1)
-    elif a != b and b == 'learn':
-        print(3)
-    elif a != b and len(a) > len(b):
-        print(2)
+def check_str(string_1, string_2):
+    if isinstance(string_1, str) and isinstance(string_2, str):
+        if string_1 == string_2:
+            return 1
+        elif string_1 != string_2 and string_2 == 'learn':
+            return 3
+        elif string_1 != string_2 and len(string_1) > len(string_2):
+            return 2
+    else:
+        return 0
 
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    check_str(st1, st2)
-    check_str(st3, st4)
-    check_str(st5, st6)
-    check_str(st7, st8)
+    print(check_str(st1, st2))
+    print(check_str(st3, st4))
+    print(check_str(st5, st6))
+    print(check_str(st7, st8))
 
 
 if __name__ == "__main__":
